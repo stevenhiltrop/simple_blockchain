@@ -10,7 +10,15 @@ public class Block {
         this.setTransactions(transactions);
 
         Object[] contents = {Arrays.hashCode(transactions), previousHash};
-        this.blockHash = Arrays.hashCode(contents);
+        this.setBlockHash(Arrays.hashCode(contents));
+    }
+
+    public int getBlockHash() {
+        return blockHash;
+    }
+
+    public void setBlockHash(int blockHash) {
+        this.blockHash = blockHash;
     }
 
     public int getPreviousHash() {
