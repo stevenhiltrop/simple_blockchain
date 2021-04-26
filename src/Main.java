@@ -23,5 +23,10 @@ public class Main {
         String[] block2Transactions = {"Edwin sent Greg 10 bitcoin", "Greg sent 10 bitcoin to Eva"};
         Block block2 = new Block(genesisBlock.getBlockHash(), block2Transactions);
         System.out.println("Hash of second block: " + block2.getBlockHash());
+
+        /* Third transaction */
+        String[] block3Transactions = {"Edwin sent Mother 30 bitcoin"};
+        Block block3 = new Block(block2.getBlockHash(), block3Transactions);
+        System.out.println("Hash of third block: " + block3.getBlockHash());
     }
 }
